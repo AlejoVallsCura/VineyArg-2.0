@@ -1,77 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
-
-body {
-    font-family: 'Montserrat';
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-h3 {
-    font-size: 1.4rem;
-    font-weight: 800;
-}
-
-h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-h5 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #1d1d1d;
-}
-
-h6 {
-    color: #fefefe;
-}
-
-button {
-    font-size: 0.8rem;
-    font-weight: 700;
-    outline: none;
-    border: none;
-    background-color: #1d1d1d;
-    color: aliceblue;
-    padding: 13px 30px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background-color: #EC268F;
-}
-
-hr {
-    width: 30px;
-    height: 2px;
-    background-color: #EC268F;
-}
-
-.estrella {
-    padding: 10px 0;
-}
-
-.estrella i {
-    font-size: 0.8rem;
-    color: goldenrod;
-}
-
 
 
 /*-----------NAVBAR-----------*/
@@ -134,7 +66,6 @@ hr {
 }
 
 
-
 @media(max-width: 900px){
     .nav__label{
         display: block;
@@ -158,194 +89,81 @@ hr {
         clip-path: circle(100% at center);
     }
 }
+
 /*----------- FIN NAVBAR-----------*/
 
-#home {
-    background-image: url(../imagenes/wine-1543170_1920.jpg);
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: top right;
+
+
+
+
+
+
+
+
+/*-----------FIN HEADER-----------*/
+.container h1 {
+    text-decoration: none;
+    color: white;
+}
+
+.container p {
+    color: white;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    background-image: url(/imagenes/pexels-pixabay-36741.jpg);
+    min-height: 670px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    height: 600px;
     display: flex;
-    background-repeat: no-repeat;
-    flex-direction: column;
+    align-items: left;
     justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.row-2 {
+    background: rgba(128, 128, 128, 0.24);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 500px;
 
 }
 
-#home span {
-    color: #EC268F;
+.col {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Regiones */
-
-.card img {
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.card .card-body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.card .card-body:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.705)
-}
-
-.card .card-body button {
+.btn {
     display: inline-block;
-    font-size: 20px;
-    font-weight: 700;
-    color: #EC268F;
-    background: none;
-    text-transform: uppercase;
-    border-bottom: 1px solid #EC268F;
-    padding: 2.5px;
-    transform: translateY(70px);
-    transition: 0.3s ease;
-}
-
-.card .card-body button:hover {
-    color: #d8d8d8;
-    border-bottom: 1px solid #d8d8d8
-}
-
-.card:nth-child(1) .card-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: end;
-}
-
-/* Productos */
-
-.producto {
-    cursor: pointer;
-    margin-bottom: 2rem;
-}
-
-.producto img {
-    transition: 0.3s all;
-}
-
-.producto:hover img {
-    opacity: 0.7;
-}
-
-.producto .buy-btn {
     background: #EC268F;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: 0.3s all;
+    color: white;
+    padding: 8px 30px;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
-.producto:hover .buy-btn {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-#banner {
-    background-image: url(../imagenes/fondovinoCorchos.jpg);
-    width: 100%;
-    height: 60vh;
-    background-size: cover;
-    background-position: top 70px right;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-#banner h4 {
-    color: #d8d8d8;
-}
-
-#banner h1 {
-    color: #ffffff;
-}
-
-#banner button {
+.separador {
     background-color: #EC268F;
+    width: 100%;
+    height: 10px;
 }
 
+/*-----------FIN HEADER-----------*/
 
-
-
-/*-----------((ANULADO) INICIO HEADER-----------*/
-/* .container h1 { */
-    /* text-decoration: none; */
-    /* color: white; */
-/* } */
-/*  */
-/* .container p { */
-    /* color: white; */
-/* } */
-/*  */
-/* .container a { */
-    /* text-decoration: none; */
-    /* color: white; */
-/* } */
-/*  */
-/* .container { */
-    /* background-image: url(/imagenes/pexels-pixabay-36741.jpg); */
-    /* min-height: 670px; */
-    /* margin: auto; */
-    /* padding-left: 25px; */
-    /* padding-right: 25px; */
-/* } */
-/*  */
-/* .row { */
-    /* height: 600px; */
-    /* display: flex; */
-    /* align-items: left; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* margin-left: 3rem; */
-/* } */
-/*  */
-/* .row-2 { */
-    /* background: rgba(128, 128, 128, 0.24); */
-    /* padding: 10px; */
-    /* border-radius: 10px; */
-    /* max-width: 500px; */
-/*  */
-/* } */
-/*  */
-/* .col { */
-    /* display: flex; */
-    /* justify-content: left; */
-    /* align-items: center; */
-    /* flex-wrap: wrap; */
-/* } */
-/*  */
-/* .btn { */
-    /* display: inline-block; */
-    /* background: #EC268F; */
-    /* color: white; */
-    /* padding: 8px 30px; */
-    /* margin: 10px 0; */
-    /* border-radius: 10px; */
-/* } */
-/*  */
-/* .separador { */
-    /* background-color: #EC268F; */
-    /* width: 100%; */
-    /* height: 10px; */
-/* } */
-/*-----------(anulado) FIN HEADER-----------*/
 
 
 
@@ -435,8 +253,7 @@ hr {
 
 
 
-
-/*-----------FIN FORMULARIO-----------*/
+/*-----------RESPONSIVE-----------*/
 
 
 
