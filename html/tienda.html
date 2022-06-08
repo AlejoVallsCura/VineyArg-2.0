@@ -36,11 +36,6 @@
         background-color: #000000;
     }
 
-    #destacados>nav>ul>li:nth.child(n):hover>a {
-        background-color: #EC268F;
-        color: #fff;
-    }
-
     .pagination a {
         color: #000;
     }
@@ -49,31 +44,42 @@
 <body>
     <!-- Header -->
     <nav class="etiqueta__nav">
+
         <div class="nav__container">
+
             <div class="nav__logo">
                 <a href="/index.html"><img src="/imagenes/logofinalTransparente.png" alt="Logo VineyArg"
                         width="200px"></a>
             </div>
+
+
             <label for="menuId" class="nav__label">
-                <img src="/MENU RESPONSIVE/menu.svg" alt="nav__img" width="40px">
+                <img src="/Menu-responsive/menu.svg" alt="nav__img" width="40px">
             </label>
             <input type="checkbox" id="menuId" class="nav__input">
-            <ul class="nav__ul">
-                <li class="nav__item"><a href="/index.html">Home</a></li>
-                <li class="nav__item"><a href="">Regiones</a></li>
-                <li class="nav__item"><a href="">Bodegas</a></li>
-                <li class="nav__item"><a href="">Tienda</a></li>
-                <li class="nav__item"><a href="">Contacto</a></li>
-                <a href="">
-                    <li class="fa-solid fa-bag-shopping nav__item"></li>
-                </a>
-                <a href="">
-                    <li class="fa-solid fa-heart nav__item"></li>
-                </a>
-                <a href="/HTML/registro.html">
-                    <li class="fa-solid fa-user nav__item"></li>
-                </a>
-            </ul>
+
+            <div class="hamburguesa">
+                <ul class="nav__ul">
+
+                    <li class="nav__item"><a href="/index.html">Home</a></li>
+                    <li class="nav__item"><a href="">Regiones</a></li>
+                    <li class="nav__item"><a href="">Bodegas</a></li>
+                    <li class="nav__item"><a href="">Tienda</a></li>
+                    <li class="nav__item"><a href="">Contacto</a></li>
+                </ul>
+
+                <ul class="nav__iconos">
+                    <a href="">
+                        <li class="fa-solid fa-bag-shopping nav__item"></li>
+                    </a>
+                    <a href="">
+                        <li class="fa-solid fa-heart nav__item"></li>
+                    </a>
+                    <a href="/HTML/registro.html">
+                        <li class="fa-solid fa-user nav__item"></li>
+                    </a>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Fin del header -->

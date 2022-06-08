@@ -9,6 +9,11 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+.separador{
+    width: 100%;
+    height: 20px;
+    background-color: #000;
+}
 
 h1 {
     font-size: 2.5rem;
@@ -77,9 +82,12 @@ hr {
 .etiqueta__nav {
     position: sticky;
     top: 0;
-    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    background-color: #292929;
     height: 80px;
     color: #fff;
+    z-index: 999;
 }
 
 .nav__container {
@@ -89,17 +97,20 @@ hr {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+    font-size: 23px;
 }
 
-.nav__logo {
-    font-size: 1.5em;
-    font-weight: 900;
+.hamburguesa {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
 }
 
 .nav__ul {
     display: grid;
     grid-auto-flow: column;
     gap: 3em;
+    padding: 0;
 }
 
 .nav__item {
@@ -115,38 +126,47 @@ hr {
     color: #fff;
 }
 
+.nav__iconos li{
+    margin-left: 30px;
+    list-style:none;
+}
+.nav__iconos a{
+    color: transparent;
+}
+
 .nav__item:hover {
     color: #e065a7;
 }
-
 .nav__item a:hover {
     color: #e065a7;
 }
 
-
 .nav__ul {
-
     text-decoration: none;
+    margin: 0;
+}
+.nav__iconos {
+    text-decoration: none;
+    margin: 0;
 }
 
 .nav__label,
 .nav__input {
     display: none;
-
 }
 
 
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
     .nav__label {
         display: block;
         cursor: pointer;
     }
 
-    .nav__ul {
+    .hamburguesa{
         position: fixed;
         top: 80px;
         bottom: 0;
-        background: #000000;
+        background: #292929;
         width: 100%;
         left: 0;
         display: flex;
@@ -154,11 +174,22 @@ hr {
         flex-direction: column;
         align-items: center;
         clip-path: circle(0.0% at 50% 50%);
-        ;
         transition: clip-path 1s ease-in-out;
     }
+    .nav__ul { 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav__iconos li{
+        padding: 20px;
+        margin: 0;
+        margin-top: 40px;
+        list-style:none;
+    }
 
-    .nav__input:checked+.nav__ul {
+    .nav__input:checked+.hamburguesa {
         clip-path: circle(100% at center);
     }
 }
@@ -175,7 +206,6 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
 }
 
 #home span {
@@ -290,8 +320,8 @@ hr {
 .footer {
     bottom: 0;
     width: 100%;
-    background: #000;
-    color: #848282;
+    background: #292929;
+    color: #000;
 }
 
 .footer .footer-a {
@@ -340,7 +370,7 @@ hr {
     height: 45px;
     line-height: 45px;
     color: #fff;
-    background-color: #272727;
+    background-color: #1a1a1a;
     border-radius: 10px;
     transition: all 300ms ease;
 }
