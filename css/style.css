@@ -203,7 +203,7 @@ hr {
 
 .card .card-body:hover {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.705)
+    background-color: rgba(246, 144, 144, 0.301)
 }
 
 .card .card-body button {
