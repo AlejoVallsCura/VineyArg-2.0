@@ -315,6 +315,74 @@ hr {
     background-color: #EC268F;
 }
 
+
+/*-----------Carrito----------*/
+
+#cart-container table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#cart-container table thead {
+    font-weight: 700;
+}
+
+#cart-container table thead td {
+    background: #EC268F;
+    color: #fff;
+    border: none;
+    padding: 6px;    
+}
+
+#cart-container table td {
+    border: 1px solid #b6b3b3;
+    text-align:center;
+}
+
+#cart-container table td:nth-child(1) {
+    width: 100px;
+}
+
+#cart-container table td:nth-child(2),
+#cart-container table td:nth-child(3) {
+    width: 200px;
+}
+
+#cart-container table td:nth-child(4),
+#cart-container table td:nth-child(5),
+#cart-container table td:nth-child(6) {
+    width: 170px;
+}
+
+#cart-container table tbody img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#cart-container table tbody i {
+    color: #8d8c89;
+}
+
+#cart-nottom .cuponDescuento h5{
+    background: #EC268F;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    font-weight: 700;
+}
+
+#cart-bottom .cuponDescuento p,
+#cart-buttom .cuponDescuento input{
+    padding: 0 12px;
+}
+
+#cart-bottom .cuponDescuento input {
+    height: 44px;
+}
+
+
 /*-----------FOOTER----------*/
 
 .footer {
