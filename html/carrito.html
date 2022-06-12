@@ -69,15 +69,15 @@
     <!-- Fin del header -->
 
     <!-- Titulo carrito -->
-    <section id="destacados" class="my-5 pb-5">
-        <div class="container mt-5 py-5">
+    <section id="carrito" class="">
+        <div class="container mt-5 py-1">
             <h2 clas="font-weight-bold">Carrito de Compras</h2>
             <hr>
         </div>
     </section>
 
     <!-- carrito -->
-    <section id="cart-container" class="container my-5">
+    <section id="cart-container" class="container my-2">
         <table width="100%">
             <thead>
                 <tr>
@@ -92,18 +92,18 @@
 
             <tbody>
                 <tr>
-                   <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-                   <td><img src="/imagenes/productos/LB_Malbec_375.png" width="25px" alt=""></td>
-                   <td>
-                       <h5>Lorem, ipsum dolor</h5>
-                   </td>
-                   <td>
-                       <h5>$ 100,00</h5>
-                   </td>
-                   <td><input class="w-25 pl-1" value="1" type="number"></td>
-                   <td>
-                       <h5>$ 130.00</h5>
-                   </td>
+                    <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><img src="/imagenes/productos/LB_Malbec_375.png" width="25px" alt=""></td>
+                    <td>
+                        <h5>Lorem, ipsum dolor</h5>
+                    </td>
+                    <td>
+                        <h5>$ 100,00</h5>
+                    </td>
+                    <td><input class="w-25 pl-1" value="1" type="number"></td>
+                    <td>
+                        <h5>$ 130.00</h5>
+                    </td>
                 </tr>
                 <tr>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
@@ -118,8 +118,8 @@
                     <td>
                         <h5>$ 130.00</h5>
                     </td>
-                 </tr>
-                 <tr>
+                </tr>
+                <tr>
                     <td><a href="#"><i class="fas fa-trash-alt"></i></a></td>
                     <td><img src="/imagenes/productos/LB_Malbec_375.png" width="25px" alt=""></td>
                     <td>
@@ -132,12 +132,12 @@
                     <td>
                         <h5>$ 130.00</h5>
                     </td>
-                 </tr>
+                </tr>
             </tbody>
         </table>
     </section>
 
-        <!-- Cupo de Descuento -->
+    <!-- Cupo de Descuento -->
     <section id="cart-bottom" class="container">
         <div class="row">
             <div class="cuponDescuento col-lg-6 col-md-6 col-12 mb-4">
@@ -151,48 +151,62 @@
             <div class="total col-lg-6 col-md-6 col-12 mb-4">
                 <div>
                     <h5>TOTAL DE LA COMPRA</h5>
-                    <button>APLICAR CUPÓN</button>
+                    <div class="d-flex justify-content-between">
+                        <h6>Subtotal</h6>
+                        <p>$ 130,00</p>
+                    </div>
+                    <hr class="second-hr">
+                    <div class="d-flex justify-content-between">
+                        <h6>Envío</h6>
+                        <p>$ 850,00</p>
+                    </div>
+                    <hr class="second-hr">
+                    <div class="d-flex justify-content-between">
+                        <h6>Total</h6>
+                        <p>$ 980,00</p>
+                    </div>
+                    <button id="botonCompra" class="ml-auto">PROCEDER A LA COMPRA</button>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
-        <div class="footer">
-            <div class="footer-a">
-                <div class="footer-columna-1">
-                    <img src="imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width=<h3>
-                    ¡Comprá los mejores vinos Aquí!
-                    </h3>
-                </div>
-                <div class="footer-columna-2">
-                    <h3>Navegacion</h3>
-                    <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Regiones</a></li>
-                        <li><a href="">Bodegas</a></li>
-                        <li><a href="">Tienda</a></li>
-                        <li><a href="">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-columna-3">
-                    <h3>Nuestras Redes</h3>
-                    <div class="redes">
-                        <a href="" class="fa fa-instagram"></a>
-                        <a href="" class="fa fa-linkedin"></a>
-                        <a href="" class="fa-solid fa-at"></a>
-                        <a href="" class="fa fa-twitter"></a>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-a">
+            <div class="footer-columna-1">
+                <img src="imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width=<h3>
+                ¡Comprá los mejores vinos Aquí!
+                </h3>
             </div>
-            <div class="footer-b">
-                <small>&copy; <b>VineyArg</b> - Todos los Derechos Reservados. </small>
+            <div class="footer-columna-2">
+                <h3>Navegacion</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Regiones</a></li>
+                    <li><a href="">Bodegas</a></li>
+                    <li><a href="">Tienda</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna-3">
+                <h3>Nuestras Redes</h3>
+                <div class="redes">
+                    <a href="" class="fa fa-instagram"></a>
+                    <a href="" class="fa fa-linkedin"></a>
+                    <a href="" class="fa-solid fa-at"></a>
+                    <a href="" class="fa fa-twitter"></a>
+                </div>
             </div>
         </div>
+        <div class="footer-b">
+            <small>&copy; <b>VineyArg</b> - Todos los Derechos Reservados. </small>
+        </div>
+    </div>
 
-        <!-- Fin del Footer -->
+    <!-- Fin del Footer -->
 
-        <div class="separador"></div>
+    <div class="separador"></div>
 
 </body>
 

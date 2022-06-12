@@ -318,10 +318,15 @@ hr {
 
 /*-----------Carrito----------*/
 
+#cart-container {
+    overflow-x: auto;
+}
+
 #cart-container table {
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
+    white-space: nowrap;
 }
 
 #cart-container table thead {
@@ -365,7 +370,15 @@ hr {
     color: #8d8c89;
 }
 
-#cart-nottom .cuponDescuento h5{
+/* Cupon Descuento & Total */
+
+#cart-bottom .cuponDescuento>div,
+#cart-bottom .total>div {
+    border: 1px solid #b6b3b3
+}
+
+#cart-bottom .cuponDescuento h5,
+#cart-bottom .total h5 {
     background: #EC268F;
     color: #fff;
     border: none;
@@ -374,13 +387,42 @@ hr {
 }
 
 #cart-bottom .cuponDescuento p,
-#cart-buttom .cuponDescuento input{
+#cart-bottom .cuponDescuento input{
     padding: 0 12px;
 }
 
 #cart-bottom .cuponDescuento input {
     height: 44px;
 }
+
+#cart-bottom .cuponDescuento input {
+    height: 44px;
+}
+
+#cart-bottom .cuponDescuento input {
+    margin: 0 0 20px 12px;
+}
+
+#cart-bottom .total div>div {
+    padding: 0 12px;
+}
+
+#cart-bottom .total h6 {
+    color: #2a2a2a;
+}
+
+.second-hr {
+    background: #b8b7b3;
+    width: 100%;
+    height: 1px;
+}
+
+#cart-bottom .total button {
+    margin: 5px 12px 10px 0;
+    display: flex;
+    margin-left: auto;
+}
+
 
 
 /*-----------FOOTER----------*/
