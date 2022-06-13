@@ -2,16 +2,20 @@
 .claseLogin{
     margin: 0;
     padding: 0;
-    height: 70vh;
+    background-image: url(/imagenes/37780.png);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
 }
+
 .login{
-    background-color: #000;
+    background-color: #1d1d1d;
     width: 520px;
     height: 460px;
     color: white;
     position: absolute;
-    left: 50%;
-    top: 40%;
+    left: 75%;
+    top: 50%;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 20px;
