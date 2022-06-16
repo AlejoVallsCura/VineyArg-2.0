@@ -10,7 +10,7 @@
     <!-- Links -->
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/agregar-producto.css">
+    <link rel="stylesheet" href="/CSS/editar.css">
     <!-- JavaScript -->
     <script src="/JS/script.js"></script>
     <!-- Google Fonts -->
@@ -67,25 +67,33 @@
     </nav>
     <!-- Fin del header -->
 
-    <form action="/eliminarUsuario" method="POST" enctype="multipart/form-data">
+    <div class="contenedor__grande">
+        <div class="producto__container">
+            <div class="titulo">Elimina tu usuario!</div>
+            <form action="/eliminarUsuario" method="POST" enctype="multipart/form-data">
 
-        <p th:if="${error != null}" th:text="${error}" style="color:red" ;></p>
-
-        <input type="hidden" class="form-control" name="id" th:value="${perfil.id}" />
-
-        <input class="control" type="email" name="correo" id="" placeholder="Ingresar su Email" required="" th:value="">
-        <input class="control" type="password" name="clave1" id="" placeholder="Ingresar su Contraseña" required=""
-            th:value="">
-
-        <input class="boton" type="submit" value="Eliminar perfil">
-    </form>
-
+                <p th:if="${error != null}" th:text="${error}" style="color:red" ;></p>
+                <div class="input_editar">
+                    <input type="hidden" class="form-control" name="id" th:value="${perfil.id}" />
+                </div>
+                <div class="input_editar">
+                    <input class="control" type="email" name="correo" id="" placeholder="Ingresar su Email" required=""
+                        th:value="">
+                </div>
+                <div class="input_editar">
+                    <input class="control" type="password" name="clave1" id="" placeholder="Ingresar su Contraseña" required=""
+                        th:value="">
+                </div>
+                <input class="boton" type="submit" value="Eliminar perfil">
+            </form>
+        </div>
+    </div>
     <!-- Footer -->
 
     <div class="footer">
         <div class="footer-a">
             <div class="footer-columna-1">
-                <img src="imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width="300px">
+                <img src="/imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width="300px">
                 <h3>
                     ¡Comprá los mejores vinos Aquí!
                 </h3>

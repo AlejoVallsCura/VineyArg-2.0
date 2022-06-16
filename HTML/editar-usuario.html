@@ -10,7 +10,7 @@
     <!-- Links -->
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/">
+    <link rel="stylesheet" href="/CSS/editar.css">
     <!-- JavaScript -->
     <script src="/JS/script.js"></script>
     <!-- Google Fonts -->
@@ -23,8 +23,8 @@
 </head>
 
 <body>
-     <!-- Header -->
-     <nav class="etiqueta__nav">
+    <!-- Header -->
+    <nav class="etiqueta__nav">
 
         <div class="nav__container">
 
@@ -66,33 +66,62 @@
 
     <!-- Fin del header -->
 
-    <form action="/editarUsuario" method="POST" enctype="multipart/form-data">
 
-        <p th:if="${error != null}" th:text="${error}" style="color:red" ;></p>
+    <div class="contenedor__grande">
+        <div class="producto__container">
+            <div class="titulo">Edita tu usuario!</div>
+            <form action="/editarUsuario" method="POST" enctype="multipart/form-data">
 
-        <input type="hidden" class="form-control" name="id" th:value="${perfil.id}">
-        <input class="control" type="text" name="nombre" id="" required="" th:value="${perfil.nombre}">
-        <input class="control" type="text" name="apellido" id="" required="" th:value="${perfil.apellido}">
-        <input class="control" type="number" name="DNI" id="" th:value="${perfil.DNI}">
-        <input class="control" type="date" name="fechaNacimiento" id="" required=""
-            th:value="${perfil.fechaNacimiento}">
-        <input class="control" type="email" name="correo" id="" th:value="${perfil.correo}">
-        <input class="control" type="password" name="clave1" id="" th:value="${clave1}">
-        <input class="control" type="password" name="clave2" id="" required="" th:value="${clave2}">
-        <input class="control" type="file" name="archivo" id="" required=""">
+                <p th:if="${error != null}" th:text="${error}" style="color:red" ;></p>
 
-            <input class=" control" type="hidden" name="tipoUsuario" id="" required=""
-            th:value="${perfil.tipoUsuario}">
+                <input type="hidden" class="form-control" name="id" th:value="${perfil.id}" >
+
+                <div class="input_editar">
+                    <input class="control" type="text" name="nombre" id="" required="" th:value="${perfil.nombre}" placeholder="Nombre">
+                </div>
+
+                <div class="input_editar">
+                    <input class="control" type="text" name="apellido" id="" required="" th:value="${perfil.apellido}" placeholder="Apellido">
+                </div>
+
+                <div class="input_editar">
+                    <input class="control" type="number" name="DNI" id="" th:value="${perfil.DNI}" placeholder="DNI">
+                </div>
+                
+                <div class="input_editar">
+                    <input class="control" type="date" name="fechaNacimiento" id="" required=""
+                        th:value="${perfil.fechaNacimiento}" placeholder="">
+                </div>
+
+                <div class="input_editar">
+                    <input class="control" type="email" name="correo" id="" th:value="${perfil.correo}" placeholder="Email">
+                </div>
+
+                <div class="input_editar">
+                    <input class="control" type="password" name="clave1" id="" th:value="${clave1}" placeholder="Clave">
+                </div>
             
-        <p><input type="checkbox" required=""> Estoy de acuerdo con <a href="/HTML/terminos-condiciones.html">Terminos y
-                Condiciones</a></p>
-        <input class="boton" type="submit" value="Actualizar perfil">
-    </form>
+                <div class="input_editar">
+                    <input class="control" type="password" name="clave2" id="" required="" th:value="${clave2}" placeholder="Repetir la clave">
+                </div>
+
+                <input class="control" type="hidden" name="tipoUsuario" id="" required=""
+                    th:value="${perfil.tipoUsuario}">
+                
+
+                <p><input type="checkbox" required=""> Estoy de acuerdo con <a
+                        href="/HTML/terminos-condiciones.html">Terminos y
+                        Condiciones</a></p>
+                <input class="boton" type="submit" value="Actualizar perfil">
+            </form>
+        </div>
+    </div>
+    
 
     <div class="footer">
         <div class="footer-a">
             <div class="footer-columna-1">
-                <img src="imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width=<h3>
+                <img src="/imagenes/logofinalTransparente.png" alt="Logo VineyArg Footer" width="300px"<h3>
                 ¡Comprá los mejores vinos Aquí!
                 </h3>
             </div>
