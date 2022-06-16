@@ -7,10 +7,11 @@
 
 .contenedor__grande {
     display: flex;
-    height: 100vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6);  */
 }
 
 .producto__container {
@@ -19,6 +20,7 @@
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
+    border: 3px solid #ccc;
 }
 
 .producto__container .titulo {
@@ -58,7 +60,7 @@ form .detalles__usuario .input__caja {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     padding-left: 15px;
     font-size: 16px;
 }

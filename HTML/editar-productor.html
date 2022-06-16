@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VineyArg</title>
 
     <!-- Links -->
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/agregar-producto.css">
+    <link rel="stylesheet" href="/CSS/editar.css">
     <!-- JavaScript -->
     <script src="/JS/script.js"></script>
     <!-- Google Fonts -->
@@ -20,13 +20,11 @@
     <!-- Iconos -->
     <script src="https://kit.fontawesome.com/0bb0724c06.js" crossorigin="anonymous"></script>
     <!-- Links -->
-
 </head>
 
 <body>
-
-     <!-- Header -->
-     <nav class="etiqueta__nav">
+    <!-- Header -->
+    <nav class="etiqueta__nav">
 
         <div class="nav__container">
 
@@ -67,78 +65,37 @@
     </nav>
 
     <!-- Fin del header -->
-
-
-
     <div class="contenedor__grande">
         <div class="producto__container">
-            <div class="titulo">Editá tu producto</div>
-            <form action="/editarProducto" method="POST" enctype="multipart/form-data">
-
+            <div class="titulo">Moificá la bodega!</div>
+            <form action="/editar-productor" method="POST" enctype="multipart/form-data">
                 <p th:if="${error != null}" th:text="${error}" style="color:red" ;></p>
-                <p th:if="${exito != null}" th:text="${exito}" style="color:red"></p>
 
-                <input type="hidden" class="form-control" name="idProductorSesion" th:value="${perfil-productor.id}" />
-                <input type="hidden" name="correoProductor" th:value="${perfil-productor.correo}" />
-
-                <label> Selecione el producto que desea editar o eliminar</label>
-                <select class="" name="idProductoElegido" required>
-                    <option th:each="producto : ${productos}" th:value="${producto.id}" th:text="${producto.nombre}">
-                    </option>
-                </select>
-
-                <br>
-
-                <label> Selecione qué desea hacer</label>
-                <select class="" name="eleccion" required>
-                    <option value="">-Seleccionar-</option>
-                    <option th:each="eleccion : ${opciones}" th:value="${eleccion}" th:text="${eleccion}">Eliminar
-                    </option>
-                    <option th:each="eleccion : ${opciones}" th:value="${eleccion}" th:text="${eleccion}">Eitar</option>
-                </select>
-
-                <div class="detalles__usuario">
-                    <div class="input__caja">
-                        <span class="detalles">Nombre</span>
-                        <input type="text" name="nombre" th:value="${nombre}" placeholder="Ingresa tu nombre" required>
+                    <div class="input_editar">
+                        <div class="input_caja">
+                            <input class="control" type="text" name="nombre" id="" placeholder="Ingresar el Nombre"
+                                required="">
+                        </div>
+                        <div class="input_caja">
+                            <input class="control" type="text" name="razonSocial" id=""
+                                placeholder="Ingresar la Razon Social" required="">
+                        </div>
+                        <div class="input_caja">
+                            <input class="control" type="text" name="domicilio" id=""
+                                placeholder="Ingresar el Domicilio" required="">
+                        </div>
+                        <div class="input_caja">
+                            <input class="control" type="email" name="correo" id="" placeholder="Ingresar un Email"
+                                required="">
+                        </div>
                     </div>
-                    <div class="input__caja">
-                        <span class="detalles">Cantidad</span>
-                        <input type="number" name="cantidad" th:value="${cantidad}" placeholder="Cantidad de productos"
-                            required>
-                    </div>
-                    <div class="input__caja">
-                        <span class="detalles">Precio</span>
-                        <input type="number" name="precio" th:value="${precio}" placeholder="Ingresa el Precio"
-                            required>
-                    </div>
-                    <div class="input__caja">
-                        <span class="detalles">Descripcion</span>
-                        <input type="text" name="descripcion" th:value="${descripcion}"
-                            placeholder="Ingresa la Descripcion" required>
-                    </div>
-
+                    <p><input type="checkbox" required=""> Estoy de acuerdo con <a
+                            href="/HTML/terminos-condiciones.html">Terminos y Condiciones</a></p>
+                    <input class="boton" type="submit" value="Actualizar perfil">
                 </div>
-                <div class="imag">
-                    <span class="detalles">Imagenes:</span>
-                    <input class="btn__imagen" type="files" name="imagenes" th:value="${imagenes}"
-                        placeholder="Ingresa fotos del producto" required>
-                </div>
-                <input class="boton" type="submit" value="Guardar">
-
             </form>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <div class="footer">
         <div class="footer-a">
@@ -174,9 +131,6 @@
     </div>
 
     <!-- Fin del Footer -->
-
-
-
 
 </body>
 
